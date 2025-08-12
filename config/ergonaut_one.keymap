@@ -30,10 +30,10 @@
 &kp TAB     &kp Q       &kp W       &kp E       &kp R           &kp T       &kp Y          &kp U           &kp I       &kp O        &kp P           &kp BSPC
 &kp ESC     &mt LGUI A  &mt LALT S  &mt LCTL D  &kp LSHIFT F    &kp G       &kp H          &mt LSHFT J     &mt LCTL K  &mt LALT L   &kp LGUI SEMI   &mt ESC
 &kp DEL     &kp Z       &kp X       &kp C       kp V            &kp B       &kp N          &kp M           &kp COMMA   &kp DOT      &kp FSLH        &kp DEL
-                                    &kp CAPS    &kp SPACE       &kp RET     &lt LWR SPACE  &mt RSHFT BSPC  &lt RSE DEL
+                                    &kp CAPS    &kp LWR         &kp RET     &lt SYM SPACE  &mt RSHFT BSPC  &lt ADJ
             >;
         };
-LKKLLKJKLKLKLKJ
+
         lower_layer {
             display-name = "SYM";
             bindings = <
