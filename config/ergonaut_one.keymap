@@ -16,7 +16,7 @@
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <LWR RSE>;
+            if-layers = <SYM RSE>;
             then-layer = <ADJ>;
         };
     };
