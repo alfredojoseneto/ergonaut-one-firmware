@@ -21,7 +21,6 @@
         };
     };
 
-/ {
     macros {
         VIM_SEL: VIM_SEL {
             compatible = "zmk,behavior-macro";
@@ -31,9 +30,6 @@
                 ;
         };
     };
-};
-
-
 
     keymap {
         compatible = "zmk,keymap";
