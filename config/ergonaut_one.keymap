@@ -12,14 +12,6 @@
 &mt { quick-tap-ms = <175>; };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri-layer {
-            if-layers = <SYM SYM>;
-            then-layer = <FUN>;
-        };
-    };
 
     macros {
         VIM_SEL: VIM_SEL {
