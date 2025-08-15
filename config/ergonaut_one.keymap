@@ -72,9 +72,9 @@
         sym_layer {
             display-name = "SYM";
             bindings = <
-&trans      &kp EXCL        &kp AT              &kp HASH        &kp DLLR            &kp LPAR            &kp RPAR        &kp AMPS        &kp STAR        &kp LS(FSLH)    &kp BR_GRAVE    &trans
-&trans      &kp EXCL        &kp AT              &kp HASH        &kp DLLR            &kp PRCNT           &kp CARET       &kp AMPS        &kp STAR        &kp LPAR        &kp RPAR        &trans
-&trans      &kp N1          &kp N2              &kp N3          &kp N4              &kp N5              &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &trans
+&trans      &kp EXCL        &kp AT              &kp HASH        &kp DLLR            &kp LPAR            &kp RPAR        &kp AMPS        &kp STAR        &kp BR_QMARK    &kp BR_GRAVE    &trans
+&trans      &kp BR_PRCNT    &kp BR_BSLH         &kp BR_MINUS    &kp BR_UNDER        &kp BR_LBKT         &kp BR_RBKT     &kp BR_EQUAL    &kp BR_DQT      &kp BR_SLASH    &kp BR_CIRC     &trans
+&trans      &kp BR_LT       &kp BR_PIPE         &kp BR_TILDE    &kp BR_ACUT         &kp BR_LBRC         &kp BR_RBRC     &kp BR_PLUS     &kp BR_SQT      &kp BR_COLON    &kp BR_GT       &trans
                                                 &trans          &trans              &trans              &trans          &trans          &trans
             >;
         };
@@ -83,7 +83,7 @@
             display-name = "FUN";
             bindings = <
 &kp F1      &kp F2          &kp F3              &kp F4          &kp F5              &kp F6              &kp F7          &kp F8          &kp F9          &kp F10     &kp F11         &kp F12
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1        &bt BT_SEL 2    &bt BT_SEL 3        &none               &none           &kp C_VOL_UP    &kp C_BRI_UP    &none       &none           &none
+&bt BT_CLR  &none           &bt BT_SEL 2        &bt BT_SEL 1    &bt BT_SEL 0        &none               &none           &kp C_VOL_UP    &kp C_BRI_UP    &none       &none           &none
 &bootloader &none           &none               &none           &none               &none               &kp C_MUTE      &kp C_VOL_DN    &kp C_BRI_DN   &none       &none           &bootloader
                                                 &trans          &trans              &trans              &trans          &trans          &trans
             >;
