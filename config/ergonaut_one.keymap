@@ -7,12 +7,21 @@
 #define NUM 1
 #define SYM 2
 #define FUN 3
+#define BTH 4
 
 &lt { quick-tap-ms = <175>; };
 
 &mt { quick-tap-ms = <175>; };
 
 / {
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <4>;
+        };
+    };
 
     macros {
         VIM_SEL: VIM_SEL {
@@ -83,8 +92,18 @@
             display-name = "FUN";
             bindings = <
 &kp F1      &kp F2          &kp F3              &kp F4          &kp F5              &kp F6              &kp F7          &kp F8          &kp F9          &kp F10     &kp F11         &kp F12
-&bt BT_CLR  &none           &bt BT_SEL 2        &bt BT_SEL 1    &bt BT_SEL 0        &none               &none           &kp C_VOL_UP    &kp C_BRI_UP    &none       &none           &none
-&bootloader &none           &none               &none           &none               &none               &kp C_MUTE      &kp C_VOL_DN    &kp C_BRI_DN   &none       &none           &bootloader
+&none       &none           &none               &none           &none               &none               &none           &kp C_VOL_UP    &kp C_BRI_UP    &none       &none           &none
+&none       &none           &none               &none           &none               &none               &kp C_MUTE      &kp C_VOL_DN    &kp C_BRI_DN    &none       &none           &none
+                                                &trans          &trans              &trans              &trans          &trans          &trans
+            >;
+        };
+
+        bluetooth_layer {
+            display-name = "BTH";
+            bindings = <
+&bt BT_CLR  &none           &bt BT_SEL 2        &bt BT_SEL 1    &bt BT_SEL 0        &none               &none           &none           &none           &none       &none           &none
+&none       &none           &none               &none           &none               &none               &none           &none           &none           &none       &none           &none
+&bootloader &none           &none               &none           &none               &none               &none           &none           &none           &none       &none           &bootloader
                                                 &trans          &trans              &trans              &trans          &trans          &trans
             >;
         };
