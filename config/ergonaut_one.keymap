@@ -9,9 +9,9 @@
 #define FUN 3
 #define BTH 4
 
-&lt { quick-tap-ms = <165>; };
+# &lt { quick-tap-ms = <165>; };
 
-&mt { quick-tap-ms = <165>; };
+# &mt { quick-tap-ms = <165>; };
 
 / {
 
@@ -88,7 +88,7 @@
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;    // <---[[moderate duration]]
+            tapping-term-ms = <150>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
