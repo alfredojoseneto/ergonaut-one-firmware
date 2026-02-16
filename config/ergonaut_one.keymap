@@ -9,9 +9,6 @@
 #define FUN 3
 #define BTH 4
 
-# &lt { quick-tap-ms = <165>; };
-
-# &mt { quick-tap-ms = <165>; };
 
 / {
 
