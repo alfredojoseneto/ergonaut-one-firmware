@@ -3,11 +3,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include "keys_br_abnt2.h"
 
-#define DEF 0
-#define NUM 1
-#define SYM 2
-#define FUN 3
-#define BTH 4
+#define DEF     0
+#define NUM     1
+#define MAC     2
+#define MAC_NUM 3
+#define SYM     4
+#define FUN     5
+#define BTH     6
 
 
 / {
