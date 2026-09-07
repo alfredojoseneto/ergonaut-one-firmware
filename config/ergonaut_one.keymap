@@ -8,6 +8,8 @@
 #define SYM 2
 #define FUN 3
 #define BTH 4
+#define MAC 5
+#define MAN 6
 
 
 / {
@@ -56,7 +58,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "MAIN";
+            display-name = "DEF";
             bindings = <
 &kp TAB     &kp Q           &kp W               &kp E           &kp R               &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp BSPC
 &kp ESC     &bhm LGUI A     &bhm LALT S         &bhm LCTRL D    &bhm LSHFT F        &kp G               &kp H           &bhm LSHFT J    &bhm LCTRL K    &bhm LALT L     &bhm LGUI SEMI  &kp ESC
@@ -104,5 +106,26 @@
                                                 &none           &none               &none               &none           &none           &none
             >;
         };
+
+        mac_layer {
+            display-name = "MAC";
+            bindings = <
+&kp TAB     &kp Q           &kp W               &kp E           &kp R               &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp BSPC
+&kp ESC     &bhm LGUI A     &bhm LALT S         &bhm LCTRL D    &bhm LSHFT F        &kp G               &kp H           &bhm LSHFT J    &bhm LCTRL K    &bhm LALT L     &bhm LGUI SEMI  &kp ESC
+&kp DEL     &kp Z           &kp X               &kp C           &kp V               &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp DEL
+                                                &kp CAPS        &mo 1               &kp RET             &kp SPACE       &mo 2           &mo 3
+            >;
+        };
+
+        num_mac_layer {
+            display-name = "MAN";
+            bindings = <
+&none       &kp N1          &kp N2              &kp N3          &kp N4              &kp N5              &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
+&none       &kp LG(TAB)     &kp LG(LC(LEFT))    &kp LA(TAB)     &kp LG(LC(RIGHT))   &VIM_SEL            &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp INS         &none
+&none       &none           &none               &none           &none               &SFT_ENT            &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp PSCRN       &none
+                                                &none           &none               &none               &none           &none           &none
+            >;
+        };
+
     };
 };
