@@ -21,7 +21,7 @@
             if-layers = <NUM SYM>;
             then-layer = <BTH>;
         };
-        tri_layer {
+        mac_tri_layer {
             if-layers = <MAN SYM>;
             then-layer = <BTH>;
         };
