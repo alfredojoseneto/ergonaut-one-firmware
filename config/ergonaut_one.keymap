@@ -124,7 +124,7 @@
             bindings = <
 &none       &kp N1          &kp N2              &kp N3          &kp N4              &kp N5              &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
 &none       &kp LG(TAB)     &kp LG(LC(LEFT))    &kp LA(TAB)     &kp LG(LC(RIGHT))   &VIM_SEL            &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp INS         &none
-&none       &N5             &none               &none           &none               &SFT_ENT            &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp PSCRN       &none
+&none       &kp N5          &none               &none           &none               &SFT_ENT            &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp PSCRN       &none
                                                 &trans          &trans              &trans              &trans          &trans          &trans
             >;
         };
