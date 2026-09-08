@@ -4,13 +4,13 @@
 #include "keys_br_abnt2.h"
 
 
-#define DEFAULT   0
-#define NUMERIC   1
-#define SYMBOL    2
-#define FUNCTIONS 3
-#define BLUETOOTH 4
-#define MACLAYER  5
-#define MACNUMBER 6
+#define DEF 0
+#define NUM 1
+#define SYM 2
+#define FUN 3
+#define BTH 4
+#define MAC 5
+#define MAN 6
 
 
 / {
@@ -18,12 +18,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <4>;
-        };
-        mac_layer {
-            if-layers = <6 2>;
-            then-layer = <4>;
+            if-layers = <NUM SYM>;
+            then-layer = <BTH>;
         };
     };
 
@@ -77,7 +73,7 @@
 &kp TAB     &kp Q           &kp W               &kp E           &kp R               &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp BSPC
 &kp ESC     &bhm LGUI A     &bhm LALT S         &bhm LCTRL D    &bhm LSHFT F        &kp G               &kp H           &bhm LSHFT J    &bhm LCTRL K    &bhm LALT L     &bhm LGUI SEMI  &kp ESC
 &kp DEL     &kp Z           &kp X               &kp C           &kp V               &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp DEL
-                                                &kp CAPS        &mo 1               &kp RET             &kp SPACE       &mo 2           &mo 3
+                                                &kp CAPS        &mo NUM             &kp RET             &kp SPACE       &mo SYM         &mo FUN
             >;
         };
 
@@ -87,7 +83,7 @@
 &none       &kp N1          &kp N2              &kp N3          &kp N4              &kp N5              &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
 &none       &kp LG(TAB)     &kp LG(LC(LEFT))    &kp LA(TAB)     &kp LG(LC(RIGHT))   &VIM_SEL            &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp INS         &none
 &none       &none           &none               &none           &none               &SFT_ENT            &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp PSCRN       &none
-                                                &none           &none               &none               &none           &none           &none
+                                                &trans          &trans              &trans              &trans          &trans          &trans
             >;
         };
 
@@ -97,47 +93,27 @@
 &none       &kp EXCL        &kp AT              &kp HASH        &kp DLLR            &kp LPAR            &kp RPAR        &kp AMPS        &kp STAR        &kp BR_QMARK    &kp BR_GRAVE    &none
 &none       &kp BR_PRCNT    &kp BR_BSLH         &kp BR_MINUS    &kp BR_UNDER        &kp BR_LBKT         &kp BR_RBKT     &kp BR_EQUAL    &kp BR_DQT      &kp BR_SLASH    &kp BR_CIRC     &none
 &none       &kp BR_LT       &kp BR_PIPE         &kp BR_TILDE    &kp BR_ACUT         &kp BR_LBRC         &kp BR_RBRC     &kp BR_PLUS     &kp BR_SQT      &kp BR_COLON    &kp BR_GT       &none
-                                                &none           &none               &none               &none           &none           &none
+                                                &trans          &trans              &trans              &trans          &trans          &trans
             >;
         };
 
         fun_layer {
             display-name = "FUNCTIONS";
             bindings = <
-&kp F1      &kp F2          &kp F3              &kp F4          &kp F5              &kp F6              &kp F7          &kp F8          &kp F9          &kp F10         &kp F11         &kp F12
-&none       &none           &none               &none           &none               &none               &none           &kp C_VOL_UP    &kp C_BRI_UP    &none           &none           &none
-&none       &none           &none               &none           &none               &none               &kp C_MUTE      &kp C_VOL_DN    &kp C_BRI_DN    &none           &none           &none
-                                                &none           &none               &none               &none           &none           &none
+&kp F1      &kp F2          &kp F3              &kp F4          &kp F5              &kp F6              &kp F7          &kp F8          &kp F9          &kp F10     &kp F11         &kp F12
+&none       &none           &none               &none           &none               &none               &none           &kp C_VOL_UP    &kp C_BRI_UP    &none       &none           &none
+&none       &none           &none               &none           &none               &none               &kp C_MUTE      &kp C_VOL_DN    &kp C_BRI_DN    &none       &none           &none
+                                                &trans          &trans              &trans              &trans          &trans          &trans
             >;
         };
 
         bluetooth_layer {
-            display-name = "BLUETOOTH";
+            display-name = "BTH";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 4    &bt BT_SEL 3        &bt BT_SEL 2    &bt BT_SEL 1        &bt BT_SEL 1        &none           &none           &none           &none           &none           &none
-&none       &none           &none               &none           &none               &none               &none           &none           &none           &none           &none           &none
-&bootloader &none           &none               &none           &none               &none               &none           &none           &none           &none           &none           &bootloader
-                                                &none           &none               &none               &none           &none           &none
-            >;
-        };
-
-        mac_layer {
-            display-name = "MACLAYER";
-            bindings = <
-&kp TAB     &kp Q           &kp W               &kp E           &kp R               &kp T               &kp Y           &kp U           &kp I           &kp O           &kp P           &kp BSPC
-&kp ESC     &bhm LCTRL A    &bhm LALT S         &bhm LGUI D     &bhm LSHFT F        &kp G               &kp H           &bhm LSHFT J    &bhm LGUI K     &bhm LALT L     &bhm LCTRL SEMI &kp ESC
-&kp DEL     &kp Z           &kp X               &kp C           &kp V               &kp B               &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &kp DEL
-                                                &kp CAPS        &mo 6               &kp RET             &kp SPACE       &mo 2           &mo 3
-            >;
-        };
-
-        num_mac_layer {
-            display-name = "MACNUMBER";
-            bindings = <
-&none       &kp N1          &kp N2              &kp N3          &kp N4              &kp N5              &kp N6          &kp N7          &kp N8          &kp N9          &kp N0          &none
-&none       &kp LG(UP)      &kp LG(LEFT)        &kp LG(TAB)     &kp LG(RIGHT)       &VIM_SEL            &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &kp INS         &none
-&none       &none           &none               &none           &none               &SFT_ENT            &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp PSCRN       &none
-                                                &none           &none               &none               &none           &none           &none
+&bt BT_CLR  &bt BT_SEL 4    &bt BT_SEL 3        &bt BT_SEL 2    &bt BT_SEL 1        &bt BT_SEL 0        &none           &none           &none           &none       &none           &none
+&none       &none           &none               &none           &none               &none               &none           &none           &none           &none       &none           &none
+&bootloader &none           &none               &none           &none               &none               &none           &none           &none           &none       &none           &bootloader
+                                                &trans          &trans              &trans              &trans          &trans          &trans
             >;
         };
 
